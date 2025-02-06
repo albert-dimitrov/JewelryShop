@@ -1,1 +1,1 @@
-# Jewelry-Shop
+# JewelryShop
