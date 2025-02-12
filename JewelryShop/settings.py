@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'JewelryShop.accounts.apps.AccountsConfig',
     'JewelryShop.jewelries.apps.JewelriesConfig',
-    'JewelryShop.common.apps.CommonConfig'
+    'JewelryShop.common.apps.CommonConfig',
+    'JewelryShop.cart.apps.CartConfig'
 ]
 
 MIDDLEWARE = [
