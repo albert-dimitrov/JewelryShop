@@ -14,3 +14,11 @@ class Reviews(models.Model):
     rating = models.IntegerField(choices=RatingChoices.choices)
     date_of_publication = models.DateField(auto_now_add=True)
 
+class Order(models.Model):
+    product = models.ForeignKey(Jewelry, on_delete=models.CASCADE)
+    customer = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=1)
+    address = models.TextField(max_length=100)
+    phone = models.CharField(max_length=11)
+    date = models.DateField(auto_now_add=True)
+    status = models.BooleanField(default=False)
