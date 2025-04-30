@@ -60,5 +60,7 @@ class DeleteReviewView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def get_success_url(self):
         return reverse_lazy('jewelry_details', kwargs={'pk': self.object.jewelry.pk})
 
+
+
 def about_us_page(request):
     return render(request, '')
