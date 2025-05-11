@@ -1,0 +1,25 @@
+
+.navbar-brand span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.nav-link {
+    color: #ddd !important;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #b08868 !important;
+}
+
+.cart-count {
+    font-size: 0.65rem;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

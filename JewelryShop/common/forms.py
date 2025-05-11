@@ -7,8 +7,12 @@ class SearchForm(forms.Form):
     jewelry_name = forms.CharField(
         required=False,
         widget=forms.TextInput(
-            attrs={'placeholder': 'Jewelry Name...'}
-        )
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Search for rings, necklaces, bracelets...'
+            }
+        ),
+        label=''
     )
 
 

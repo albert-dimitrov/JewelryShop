@@ -13,7 +13,7 @@ from JewelryShop.jewelries.models import Jewelry
 
 class HomePage(ListView):
     model = Jewelry
-    template_name = ''
+    template_name = 'common/home.html'
     context_object_name = 'all_jewelries'
 
     def get_context_data(self, **kwargs):
