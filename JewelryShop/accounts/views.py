@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, DetailView, DeleteView
 
-from JewelryShop.accounts.forms import AppUserCreationForm, ProfileEditForm
+from JewelryShop.accounts.forms import AppUserCreationForm, ProfileEditForm, CustomLoginForm
 from JewelryShop.accounts.models import Profile, CustomUser
 
 # Create your views here.
@@ -14,7 +14,7 @@ UserModel = get_user_model()
 class UserRegisterView(CreateView):
     model = UserModel
     form_class = AppUserCreationForm
-    template_name = ''
+    template_name = 'accounts/register-page.html'
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
@@ -25,8 +25,8 @@ class UserRegisterView(CreateView):
         return response
 
 class UserLoginView(LoginView):
-    template_name = ''
-
+    template_name = 'accounts/login-page.html'
+    authentication_form = CustomLoginForm
 
 class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile
