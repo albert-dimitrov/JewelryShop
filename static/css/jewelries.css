@@ -1,0 +1,27 @@
+.category-selection-page {
+    min-height: 80vh;
+}
+
+.category-card {
+    transition: transform 0.2s ease;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.category-card:hover {
+    transform: scale(1.03);
+}
+
+.category-img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.category-card .card-title {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+}
