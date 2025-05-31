@@ -77,3 +77,52 @@
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
+
+.profile-page {
+    margin-top: 3rem;
+}
+
+.profile-card {
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.profile-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.profile-details h5 {
+    font-weight: 500;
+    color: #555;
+}
+
+.profile-details p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.edit-profile-page {
+    margin-top: 3rem;
+}
+
+.edit-profile-card {
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.edit-profile-card h3 {
+    font-weight: 600;
+    color: #333;
+}
+
+.edit-profile-card .form-label {
+    font-weight: 500;
+    color: #555;
+}

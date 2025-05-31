@@ -1,0 +1,32 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="profile-page container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="profile-card card shadow-sm p-4">
+                    <div class="text-center mb-4">
+                        <h3 class="profile-name">{{ object.profile.get_full_name }}</h3>
+                        <p class="text-muted">{{ object.email }}</p>
+                    </div>
+
+                    <div class="profile-details">
+                        <h5 class="mb-2">Contact Info</h5>
+                        <p><strong>Phone:</strong> {{ object.profile.phone_number|default:"Not provided" }}</p>
+
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'profile_edit' request.user.pk %}" class="btn btn-outline-primary">Edit Profile</a>
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button class="btn btn-outline-danger">Logout</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

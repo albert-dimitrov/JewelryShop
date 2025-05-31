@@ -34,7 +34,7 @@ class UserLoginView(LoginView):
 class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile
     form_class = ProfileEditForm
-    template_name = ''
+    template_name = 'accounts/edit-profile.html'
 
     def test_func(self):
         profile = get_object_or_404(Profile, pk=self.kwargs['pk'])
@@ -44,9 +44,13 @@ class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return reverse_lazy('profile_details', kwargs={'pk': self.object.pk})
 
 
-class ProfileDetailsView(LoginRequiredMixin, DetailView):
+class ProfileDetailsView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = UserModel
-    template_name = ''
+    template_name = 'accounts/profile-page.html'
+
+    def test_func(self):
+        profile = get_object_or_404(UserModel, pk=self.kwargs['pk'])
+        return self.request.user == profile
 
 
 class ProfileDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):

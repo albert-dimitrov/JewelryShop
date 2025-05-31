@@ -33,6 +33,16 @@ class ProfileEditForm(forms.ModelForm):
         model = Profile
         exclude = ('user',)
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # Apply Bootstrap styles to all fields
+        for field_name, field in self.fields.items():
+            field.widget.attrs.update({
+                'class': 'form-control',
+                'placeholder': field.label,
+            })
+
 class CustomLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
