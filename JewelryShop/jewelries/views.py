@@ -66,7 +66,6 @@ def category_choose_page(request):
         {'name': 'Anklets', 'image': 'anklet.jpg'},
         {'name': 'Brooches & Pins', 'image': 'brooch.jpg'},
         {'name': 'Charms', 'image': 'charms.jpg'},
-        {'name': 'Jewelry Sets', 'image': 'set.jpg'},
         {'name': 'Watches', 'image': 'watch.jpg'},
     ]
 
