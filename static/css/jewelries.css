@@ -52,3 +52,9 @@
     font-size: 0.95rem;
     color: #666;
 }
+
+.custom-title {
+    color: #666666;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
