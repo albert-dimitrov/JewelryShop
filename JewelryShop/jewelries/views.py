@@ -50,12 +50,17 @@ class JewelriesDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class JewelriesProductShowView(ListView):
     model = Jewelry
-    template_name = ''
+    template_name = 'jewelries/items-page.html'
+    context_object_name = 'jewelries'
 
     def get_queryset(self):
         product_category = self.kwargs.get('category')
         return Jewelry.objects.filter(category=product_category)
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = self.kwargs.get('category')
+        return context
 
 def category_choose_page(request):
     categories = [
