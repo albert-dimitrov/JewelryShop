@@ -25,3 +25,30 @@
     font-size: 1.1rem;
     color: #333;
 }
+
+.custom-category-card {
+    border-radius: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.custom-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.custom-category-img {
+    height: 280px;
+    object-fit: cover;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.custom-category-card .card-title {
+    font-size: 1.25rem;
+}
+
+.custom-category-card .card-text {
+    font-size: 0.95rem;
+    color: #666;
+}
